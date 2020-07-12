@@ -1,0 +1,38 @@
+#sign-up{
+    display: flex;
+}
+#logo{
+    width:60%;
+}
+#register{
+    margin-left:35%;
+    margin-top:2%;
+    width:30%;
+}
+#heading{
+    margin-left:20%;
+}
+.label{
+    font-size:20px;
+    font-weight: 700;
+    color:grey;
+}
+.label1{
+    font-size:15px;
+    font-weight: 500;
+    color:grey;
+}
+.label2{
+    font-size:15px;
+    font-weight: 500;
+    color:rgb(61, 59, 59);
+}
+#submit{
+    margin-left:35%;
+    background:#69a74e;
+    border: .2px solid rgb(36, 184, 48);
+    color: white;
+    padding: 10px 40px;
+    text-decoration: none;
+    cursor: pointer;
+  }

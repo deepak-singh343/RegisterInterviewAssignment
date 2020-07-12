@@ -1,0 +1,44 @@
+<div id="sign-up">
+    <div id="register">
+        <!-- registration form-->
+        <h1 id="heading">Create Account</h1>
+        <form action="/users/create" enctype="multipart/form-data" method="POST" >
+            <div class="form-group row">
+                <div class="col">
+                    <input type="text" name="name" class="form-control"  placeholder="Your Name" >
+                    <!--name of registering user-->
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col">
+                    <input type="email" name="email" class="form-control" placeholder="Your Email ID" required>
+                    <!--Email of registering user-->
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                    <!--password of registering user-->
+                </div>
+                <div class="col">
+                    <input type="password" name="confirm_password" class="form-control" placeholder="Confirm Password"
+                        required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <input type="text" name="phone" class="form-control" placeholder="Your Phone number" required>
+                    <!--phone of registering user-->
+                </div>
+            </div>
+            <input type="file" name="avatar"/>
+            <br>
+            <br>
+            <input type="submit" value="Sign Up" id="submit">
+            <!--Sign up button-->
+            
+        </form>
+        <br>
+    </div>
+</div>

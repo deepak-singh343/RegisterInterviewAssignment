@@ -1,0 +1,15 @@
+/* css for footer */
+#layout-footer {
+   width:100%;
+   background-color: rgb(237, 238, 245);
+   position:fixed;
+   bottom:0;
+ }
+ .footer-content{
+    font-size:15px;
+    font-weight: 500;
+    color:rgb(61, 59, 59);
+    padding-left:150px;
+    padding-bottom: 0px;
+}
+  

@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>
+            <%= title  %>                   
+        </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+        <link rel="stylesheet" href="/css/layout.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/photo.css">
+        <link rel="stylesheet" href="/css/sign_up.css">
+
+        <%- style %>                    <!-- add styles -->
+        
+    </head>
+
+    <body>
+        <%- include('_header'); %>          <!-- add header -->
+
+       
+        
+        <main id="layout-main">
+            <%- body %>                        <!-- add body -->
+        </main>
+
+
+        <%- include('_footer'); %>                  <!-- add footer  -->
+
+        <%- script %>                               <!-- add scripts -->
+        <script>
+
+            <% if (flash.success && flash.success.length > 0) {%>
+                new Noty({
+                    theme: 'bootstrap-v4',
+                    text: "<%= flash.success %>",                     
+                    type: 'success',                                // notification properties for success
+                    layout: 'topLeft',
+                    timeout: 1000
+                    
+                }).show();    
+            <%} %>
+
+            <% if (flash.error && flash.error.length > 0) {%>
+                new Noty({
+                    theme: 'relax',
+                    text: "<%= flash.error %>",                                     
+                    type: 'error',                                   //notification properties for error or failure
+                    layout: 'topLeft',
+                    timeout: 1500
+                    
+                }).show();    
+            <%} %>                        
+        </script>
+        
+    </body>
+</html>
